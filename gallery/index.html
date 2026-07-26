@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Al Meera Canary</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../gallery.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <a href="../index.html">Al Meera Canary</a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../canarypedia/index.html">Canarypedia</a></li>
+            <li><a href="index.html" class="active">Gallery</a></li>
+            <li><a href="../kode-ring/index.html">Kode Ring</a></li>
+            <li><a href="../contact/index.html">Contact</a>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<div class="gallery">
+
+<img src="../images/gallery/foto0.jpg">
+<img src="../images/gallery/foto1.jpg">
+<img src="../images/gallery/foto2.jpg">
+<img src="../images/gallery/foto3.jpg">
+<img src="../images/gallery/foto4.jpg">
+<img src="../images/gallery/foto5.jpg">
+<img src="../images/gallery/foto6.jpg">
+<img src="../images/gallery/foto7.jpg">
+<img src="../images/gallery/foto8.jpg">
+<img src="../images/gallery/foto9.jpg">
+<img src="../images/gallery/foto10.jpg">
+<img src="../images/gallery/foto11.jpg">
+<img src="../images/gallery/foto12.jpg">
+<img src="../images/gallery/foto13.jpg">
+<img src="../images/gallery/foto14.jpg">
+
+</div>
+
+</main>
+
+<div id="lightbox" class="lightbox">
+
+    <span class="close">&times;</span>
+
+    <span class="prev">&#10094;</span>
+
+    <img id="lightbox-img">
+
+    <span class="next">&#10095;</span>
+
+</div>
+
+<script>
+
+const gallery=document.querySelectorAll(".gallery img");
+
+const lightbox=document.getElementById("lightbox");
+
+const lightboxImg=document.getElementById("lightbox-img");
+
+const prev=document.querySelector(".prev");
+
+const next=document.querySelector(".next");
+
+const close=document.querySelector(".close");
+
+let current=0;
+
+function openImage(index){
+
+    current=index;
+
+    lightbox.style.display="flex";
+
+    lightboxImg.src=gallery[index].src;
+
+}
+
+gallery.forEach((img,index)=>{
+
+    img.onclick=()=>{
+
+        openImage(index);
+
+    }
+
+});
+
+close.onclick=()=>{
+
+    lightbox.style.display="none";
+
+}
+
+lightbox.onclick=(e)=>{
+
+    if(e.target===lightbox){
+
+        lightbox.style.display="none";
+
+    }
+
+}
+
+next.onclick=()=>{
+
+    current++;
+
+    if(current>=gallery.length){
+
+        current=0;
+
+    }
+
+    openImage(current);
+
+}
+
+prev.onclick=()=>{
+
+    current--;
+
+    if(current<0){
+
+        current=gallery.length-1;
+
+    }
+
+    openImage(current);
+
+}
+
+document.addEventListener("keydown",(e)=>{
+
+    if(lightbox.style.display==="flex"){
+
+        if(e.key==="ArrowRight") next.click();
+
+        if(e.key==="ArrowLeft") prev.click();
+
+        if(e.key==="Escape") lightbox.style.display="none";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

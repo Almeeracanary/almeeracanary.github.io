@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#111;
+    color:white;
+    font-family:'Poppins', sans-serif;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+}
+
+
+.logo{
+    color:#FFD700;
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/hero.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    align-items:center;
+    text-align:center;
+
+    padding-top:40px;
+}
+.hero h1{
+    font-size:100px;
+    color:#FFD700;
+
+    margin-top:-220px;
+}
+
+.hero p{
+    font-size:26px;
+    margin-top:20px;
+}
+
+
+.hero{
+    height:100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url("images/hero.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background:#111;
+    padding:18px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.logo a{
+    color:#fff;
+    text-decoration:none;
+    font-size:40px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#7ec850;
+}
+
+nav ul li a.active{
+    color:#7ec850;
+}

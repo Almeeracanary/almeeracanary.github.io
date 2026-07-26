@@ -1,0 +1,918 @@
+/* ===========================
+   CANARYPEDIA - AL MEERA CANARY
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111;
+    color:#fff;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("../images/hero.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:20px 0;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+
+    transition:.3s;
+
+}
+
+nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:45px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#D4AF37;
+
+}
+
+/* ===========================
+   HERO CONTENT
+=========================== */
+
+.hero-content{
+
+    text-align:center;
+
+    max-width:800px;
+
+    padding:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:72px;
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    font-size:28px;
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   CARD SECTION
+=========================== */
+
+.cards{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#1d1d1d;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    border:1px solid #333;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.4);
+
+}
+
+.card h2{
+
+    color:#D4AF37;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:#d0d0d0;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.card a{
+
+    color:#D4AF37;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.card a:hover{
+
+    color:white;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#888;
+
+    border-top:1px solid #333;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+height:80vh;
+
+}
+
+.hero-content h1{
+
+font-size:46px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+nav a{
+
+font-size:15px;
+
+}
+
+.cards{
+
+width:95%;
+
+}
+
+}
+/* ===========================
+   KATEGORI
+=========================== */
+
+.categories{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    text-align:center;
+
+}
+
+.categories h2{
+
+font-size:48px;
+
+color:#D4AF37;
+
+margin-bottom:15px;
+
+}
+.category-desc{
+
+color:#bdbdbd;
+
+font-size:18px;
+
+margin-bottom:45px;
+
+}
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+    gap:20px;
+
+}
+
+.category{
+
+    background:#1d1d1d;
+
+    border:1px solid #333;
+
+    border-radius:15px;
+
+    padding:30px 20px;
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+.category:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#D4AF37;
+
+}
+
+.category{
+
+    font-size:40px;
+
+}
+
+.category span{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+.hero-btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:16px 40px;
+
+background:#D4AF37;
+
+color:#111 !important;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+border-radius:50px;
+
+transition:0.3s;
+
+}
+
+.hero-btn:hover{
+
+background:#f4c542;
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 25px rgba(212,175,55,.35);
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 25px rgba(212,175,55,.4);
+
+}
+html{
+    scroll-behavior:smooth;
+}
+/* ===========================
+   HERO STATS
+=========================== */
+
+.hero-stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:50px;
+
+    margin:40px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-stats div{
+
+    text-align:center;
+
+}
+
+.hero-stats strong{
+
+    display:block;
+
+    font-size:30px;
+
+    color:#D4AF37;
+
+}
+
+.hero-stats span{
+
+    color:#ddd;
+
+    font-size:15px;
+
+}
+.article{
+
+max-width:900px;
+
+margin:80px auto;
+
+padding:40px;
+
+background:#1d1d1d;
+
+border-radius:15px;
+
+line-height:1.9;
+
+}
+
+.article h1{
+
+color:#D4AF37;
+
+margin-bottom:30px;
+
+font-size:42px;
+
+}
+
+.article h2{
+
+margin-top:35px;
+
+margin-bottom:15px;
+
+color:#D4AF37;
+
+}
+
+.article p{
+
+color:#ddd;
+
+margin-bottom:20px;
+
+}
+
+.article ul{
+
+padding-left:25px;
+
+}
+
+.article li{
+
+margin-bottom:12px;
+
+color:#ddd;
+
+}
+/* ===========================
+   ARTICLE HERO
+=========================== */
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 60px;
+
+    background:rgba(20,20,20,.9);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid #333;
+
+}
+
+.logo a{
+
+    text-decoration:none;
+
+    color:#D4AF37;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#D4AF37;
+
+}
+.article-hero{
+
+height:350px;
+
+background:
+
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+url("../images/history-banner.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.article-hero h1{
+
+font-size:55px;
+
+color:#D4AF37;
+
+margin-bottom:15px;
+
+}
+
+.article-hero p{
+
+font-size:22px;
+
+color:white;
+
+}
+/* ===========================
+   ARTICLE IMAGE
+=========================== */
+
+.article figure{
+
+    margin:35px 0;
+
+    text-align:center;
+
+}
+
+.article img{
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:15px;
+
+    border:2px solid #333;
+
+    transition:.3s;
+
+}
+
+.article img:hover{
+
+    transform:scale(1.02);
+
+    border-color:#D4AF37;
+
+}
+
+.article figcaption{
+
+    margin-top:12px;
+
+    color:#999;
+
+    font-size:14px;
+
+    font-style:italic;
+
+}
+/* ===========================
+   FACT BOX
+=========================== */
+
+.fact-box{
+
+    background:#2b2412;
+
+    border-left:5px solid #D4AF37;
+
+    padding:25px;
+
+    margin:35px 0;
+
+    border-radius:10px;
+
+}
+
+.fact-box h3{
+
+    color:#D4AF37;
+
+    margin-bottom:10px;
+
+}
+
+.fact-box p{
+
+    margin:0;
+
+}
+/* ===========================
+   REFERENCES
+=========================== */
+
+.article-divider{
+
+    border:0;
+
+    border-top:1px solid #444;
+
+    margin:60px 0 40px;
+
+}
+
+.references h2{
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+}
+
+.references ol{
+
+    padding-left:25px;
+
+}
+
+.references li{
+
+    color:#ccc;
+
+    margin-bottom:12px;
+
+    line-height:1.8;
+
+}
+.article h2{
+    color:#D4AF37;
+    margin-top:35px;
+    margin-bottom:15px;
+    border-left:5px solid #D4AF37;
+    padding-left:12px;
+}
+/* ===========================
+   JENIS KENARI
+=========================== */
+
+.article {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    line-height: 1.8;
+}
+
+.article h1{
+    font-size: 42px;
+    color:#222;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.article h2{
+    font-size:28px;
+    color:#d4af37;
+    margin-top:45px;
+    margin-bottom:15px;
+    border-left:5px solid #d4af37;
+    padding-left:15px;
+}
+
+.article p{
+    font-size:18px;
+    color:#555;
+    text-align:justify;
+    margin-bottom:18px;
+}
+
+.article ul{
+    margin:15px 0 25px 30px;
+}
+
+.article li{
+    font-size:18px;
+    color:#444;
+    margin-bottom:10px;
+}
+
+.article strong{
+    color:#111;
+}
+/* HEADER */
+
+.top-header{
+    background:#222;
+    padding:18px 0;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#FFD54F;
+    font-size:28px;
+    margin:0;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+    margin:0;
+    padding:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FFD54F;
+}
+
+nav a.active{
+    color:#FFD54F;
+    font-weight:bold;
+}
+/* ===== Tabel Persilangan ===== */
+
+.cross-table{
+    width:100%;
+    margin:30px 0;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.cross-table th{
+    background:#d4af37;
+    color:#fff;
+    padding:15px;
+    text-align:center;
+}
+
+.cross-table td{
+    padding:14px;
+    text-align:center;
+    color:#333;
+    background:#fff;
+    border:1px solid #e5e5e5;
+}
+
+.cross-table tbody tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+.cross-table tbody tr:nth-child(even) td{
+    background:#f8f8f8;
+}
+
+.cross-table tbody tr:hover td{
+    background:#fff8dc;
+}
+
+.note-box{
+    margin-top:20px;
+    padding:15px 20px;
+    background:#fff8dc;
+    border-left:5px solid #d4af37;
+    color:#444;
+    border-radius:8px;
+}
+/* ===== Tabel Persilangan ===== */
+
+.cross-table{
+    width:100%;
+    margin:30px 0;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.cross-table th{
+    background:#d4af37;
+    color:#fff;
+    padding:15px;
+    text-align:center;
+}
+
+.cross-table td{
+    padding:14px;
+    text-align:center;
+    color:#333;
+    background:#fff;
+    border:1px solid #e5e5e5;
+}
+
+.cross-table tbody tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+.cross-table tbody tr:nth-child(even) td{
+    background:#f8f8f8;
+}
+
+.cross-table tbody tr:hover td{
+    background:#fff8dc;
+}
+
+.note-box{
+    margin-top:20px;
+    padding:15px 20px;
+    background:#fff8dc;
+    border-left:5px solid #d4af37;
+    color:#444;
+    border-radius:8px;
+}

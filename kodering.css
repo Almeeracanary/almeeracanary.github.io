@@ -1,0 +1,47 @@
+main{
+
+    max-width:900px;
+    margin:60px auto;
+    padding:20px;
+
+}
+
+.kodering-box{
+
+    background:#ffffff;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+}
+
+.kodering-box h1{
+
+    text-align:center;
+    color:#222;
+    margin-bottom:25px;
+
+}
+
+.kodering-box h2{
+
+    color:#5e8c31;
+    margin-top:35px;
+    margin-bottom:15px;
+
+}
+
+.kodering-box p{
+
+    color:#444;
+    line-height:1.8;
+
+}
+
+hr{
+
+    margin:35px 0;
+    border:none;
+    border-top:1px solid #ddd;
+
+}
